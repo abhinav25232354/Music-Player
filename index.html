@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player By Abhinav</title>
+
+</head>
+
+<body>
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <button id="choose-folder-btn">Choose Music Folder</button>
+            <div id="playlists"></div>
+            <div id="songs"></div>
+        </aside>
+        <section class="player-section">
+            <header>
+                <h1 data-title="Music Player">Music <br> Player</h1>
+            </header>
+            <footer id="player" class="hidden">
+        <div class="song-info">
+            <span id="current-song-title"></span>
+        </div>
+        <div class="controls">
+            <button id="prev-btn"></button>
+            <button id="play-pause-btn"></button>
+            <button id="next-btn"></button>
+        </div>
+        <div class="progress-bar">
+            <span id="current-time"
+                style="color:#fff;font-size:0.95rem;min-width:44px;text-align:right;position:absolute;left:0;top:-22px;"></span>
+            <input type="range" id="progress" value="0" min="0" max="100">
+            <span id="duration"
+                style="color:#fff;font-size:0.95rem;min-width:44px;text-align:left;position:absolute;right:0;top:-22px;"></span>
+        </div>
+    </footer>
+        </section>
+    </div>
+
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
